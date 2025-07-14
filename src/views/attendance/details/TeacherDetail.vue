@@ -1,21 +1,11 @@
 <template>
   <div>
     <!-- Nanti Breadcrumb -->
-    <div class="text-caption text-grey-draken-1 mb-2">
-      Attendance / Teacher / {{ teacherId }}
-    </div>
+    <Breadcrumb path="Attendance / Teacher / {{ teacherId }}" />
 
     <h2 class="text-h5 font-weight-bold mb-4">Teacher Attendance Detail</h2>
     <v-card class="pa-4" elevation="1">
-      <div class="d-flex align-center gap-4 mb-4">
-        <v-avatar size="64"
-          ><img src="@/assets/img/logo/user.png" alt="User"
-        /></v-avatar>
-        <div>
-          <div class="text-subtitle-1 font-weight-bold">Wade Warren</div>
-          <div class="text-caption">NIP: 1234567890</div>
-        </div>
-      </div>
+      <UserCard name="John Doe" nip="1234567890" label="NISN" />
 
       <div>
         <p>
@@ -40,6 +30,8 @@
 
 <script setup>
 import { useRoute } from "vue-router";
+import UserCard from "@/components/attendance/UserCard.vue";
+import Breadcrumb from "@/components/common/Breadcrumb.vue";
 
 const route = useRoute();
 const teacherId = route.params.id;

@@ -1,9 +1,7 @@
 <template>
   <div>
     <!-- Nanti Breadcrumb -->
-    <div class="text-caption text-grey-draken-1 mb-2">
-      Attendance / Teacher Attendance
-    </div>
+    <Breadcrumb path="Attendance / Teacher Attendance" />
     <div>
       <h2 class="text-h5 font-weight-bold mb-1">Attendance</h2>
       <span class="text-subtitle-2">TEACHER ATTENDANCE</span>
@@ -34,44 +32,7 @@
       </div>
     </div>
 
-    <v-table>
-        <thead>
-            <tr>
-                <th>Image</th>
-                <th>Teacher Name</th>
-                <th>Attendance Date</th>
-                <th>Attendance Status</th>
-                <th>Previous 7 Days</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="i in 5" :key="i">
-                <td><v-avatar size="32"><img src="@/assets/img/logo/user.png" alt=""></v-avatar></td>
-                <td>John Doe<br /><small>NIP: 1234567890</small></td>
-                <td>13/07/2023 12:00:00</td>
-                <td><v-chip color="success">Present</v-chip></td>
-                <td>
-                  <v-icon color="green">mdi-check-circle</v-icon>
-                  <v-icon color="red">mdi-close-circle</v-icon>
-                  <v-icon color="green">mdi-check-circle</v-icon>
-                  <v-icon color="green">mdi-check-circle</v-icon>
-                  <v-icon color="green">mdi-check-circle</v-icon>
-                  <v-icon color="red">mdi-close-circle</v-icon>
-                  <v-icon color="green">mdi-check-circle</v-icon>
-                </td>
-                <td>
-                  <v-btn 
-                  size="small" 
-                  color="primary" 
-                  variant="outlined"
-                  :to="{ name: 'TeacherDetail', params: { id: i } }"
-                  >View Data
-                </v-btn>
-                </td>
-            </tr>
-        </tbody>
-    </v-table>
+    <AttendanceTable />
 
     <div class="d-flex justify-space-between align-center mt-4">
       <span class="text-caption">Showing 1 to 5 of 50 entries</span>
@@ -82,8 +43,12 @@
 
 
 <script setup>
-import { ref } from 'vue';
+import AttendanceTable from '@/components/attendance/AttendanceTable.vue';
+import Breadcrumb from '@/components/common/Breadcrumb.vue';
 
-const page = ref(1);
-const selectedDate = ref(new Date());
+const items = [
+  {
+
+  }
+]
 </script>
