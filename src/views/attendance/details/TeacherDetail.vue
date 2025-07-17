@@ -5,7 +5,7 @@
 
     <h2 class="text-h5 font-weight-bold mb-4">Teacher Attendance Detail</h2>
     <v-card class="pa-4" elevation="1">
-      <UserCard name="John Doe" nip="1234567890" label="NISN" />
+      <UserCard name="Junaedi" nip="1234567890" label="NIP" />
 
       <div>
         <p>

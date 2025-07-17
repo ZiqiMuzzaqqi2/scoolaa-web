@@ -14,7 +14,7 @@
       <tr v-for="item in items" :key="item.id">
         <td>
           <v-avatar size="32"
-            ><img src="@/assets/img/logo/user.png" alt="User"
+            ><img src="@/assets/img/icon/sidebar/user.png" alt="User"
           /></v-avatar>
         </td>
         <td>

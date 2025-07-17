@@ -12,6 +12,13 @@
 defineProps({
     name: String,
     nip: String,
-    label: String
+    label: {
+        type: String,
+        default: 'NIP'
+    },
+    Image: {
+        type: String,
+        default: '@/assets/img/logo/user.png'
+    }
 })
 </script>

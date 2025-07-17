@@ -26,7 +26,7 @@ import AppSidebar from "@/components/layouts/AppSidebar.vue"
 <style scoped>
 .layout-wrapper {
   display: flex;
-  height: calc(100vh - 65px); /* Total tinggi layar dikurangi header */
+  height: calc(100vh - 65px);
   margin-top: 65px;
   overflow: hidden;
 }
@@ -36,12 +36,13 @@ import AppSidebar from "@/components/layouts/AppSidebar.vue"
   background-color: white;
   border-right: 1px solid #e0e0e0;
   padding-top: 16px;
+  overflow-y: auto;
 }
 
 .content-panel {
   flex: 1;
   background-color: #f5f7fa;
   padding: 24px 32px;
-  overflow-y: hidden; /* Tidak scroll */
+  overflow-y: auto;
 }
 </style>
